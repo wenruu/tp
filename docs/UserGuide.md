@@ -129,8 +129,6 @@ Format: `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​`
 * `add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01`
 * `add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal`
 
-<div style="page-break-after: always;"></div>
-
 ---
 
 ### Adding a Loan: `loan`
@@ -232,8 +230,6 @@ Records a payment made by the loanee.
 
 ---
 
-<div style="page-break-after: always;"></div>
-
 ### Filtering loans: `filter`
 
 Filters and displays the loans by the given conditions and parameters.
@@ -325,8 +321,6 @@ Deletes a specified loan from a loanee.
 **Example:** `delete loan 2 1`
 
 ---
-
-<div style="page-break-after: always;"></div>
 
 ### Listing all Loanees: `list`
 
@@ -455,8 +449,6 @@ _Details coming soon ..._
 4. **When using sort**, currently there is no unsort feature. However, it is one of the future features we plan to implement.
 5. The UI which displays monetary values may not always have accurate decimal placings, this is simply due rounding due to us forcing the display to be in 2dp.
 --------------------------------------------------------------------------------------------------------------------
-
-<div style="page-break-after: always;"></div>
 
 ## Command summary
 
