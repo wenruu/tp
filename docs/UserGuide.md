@@ -125,7 +125,7 @@ Format: `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​`
 </div>
 
 
-Examples:
+**Examples:**
 * `add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01`
 * `add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal`
 
@@ -156,9 +156,12 @@ Format: `loan INDEX TYPE AMOUNT INTEREST_RATE DUE_DATE​`
 - (Loan calculations: [Check the Appendix](#appendix)).
 </div>
 
-Examples:
+**Examples:**
 * `loan 1 s 100.00 5.5 2025-12-31`
 * `loan 2 c 500 7 2026-06-15`
+
+**Example screenshot:**
+<img width="852" alt="image" src="https://github.com/user-attachments/assets/1c412eb0-9600-48b7-ba29-2f415300dacd" />
 
 ---
 
@@ -186,6 +189,9 @@ Sorts the borrowers by parameter and order.
 
 **Example:** `sort s/AMOUNT o/ASC`
 
+**Example Screenshot:**
+<img width="852" alt="image" src="https://github.com/user-attachments/assets/6e450902-4202-4949-bf11-9bd5ec5d7656" />
+
 ---
 
 
@@ -209,6 +215,10 @@ Records a payment made by the loanee.
 - Pays all the remaining owed by the loanee for a particular loan.
 
 **Example:** `pay 1 2 all`
+
+**Example Screenshot:**
+<img width="852" alt="image" src="https://github.com/user-attachments/assets/1bdcf178-8ad5-454a-870d-f5f0ded0c7ef" />
+
 
 <div markdown="span" class="alert alert-primary">  
 💡 Tips:
@@ -267,6 +277,9 @@ You can chain multiple predicates of different parameters.
 **Example:** `filter pred/ amount < 200 pred/ isPaid y` (without person index)
 
 **Example:** `filter clear` (to clear all predicates)
+
+**Example Screenshot:**
+<img width="808" alt="image" src="https://github.com/user-attachments/assets/00eea531-a008-4c82-8856-4eb4d128e1c7" />
 
 ---
 
@@ -354,6 +367,9 @@ Edits the details of a loanee.
 * `edit 2 n/James Lee e/jameslee@example.com`
 * `edit 1 a/123 NUS Street t/Enemy`
 
+**Example Screenshot:**
+<img width="852" alt="image" src="https://github.com/user-attachments/assets/96a222f8-288c-4de8-95e0-274b2e7e2b6d" />
+
 ---
 
 ### Finding a name: `find`
@@ -379,6 +395,9 @@ Finds all persons whose names contain any of the specified keywords (case-insens
 </div>
 
 **Example:** `find James Jake` 
+
+**Example Screenshot:**
+<img width="852" alt="image" src="https://github.com/user-attachments/assets/de53fab8-745c-46df-8842-e3b6a40ef1fa" />
 
 ---
 

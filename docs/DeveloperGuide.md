@@ -692,14 +692,14 @@ Given below are instructions to test the app manually.
 
 ---
 
-### FilterLoan Command
+### Filter Loan Command
 
-1. **Test case:** `filterLoan unpaid`
-   **Expected:** Only persons with unpaid loans are displayed.
-2. **Test case:** `filterLoan paid`
-   **Expected:** Only persons with fully paid loans are displayed.
-3. **Test case:** `filterLoan abc`
-   **Expected:** Error message indicating invalid filter option.
+1. **Test case:** `filter pred/ isPaid n` in person list page
+   **Expected:** All persons are still shown, loans under each person will only show unpaid loans
+2. **Test case:** `filter 3 pred/ amount > 500 pred/ loanType s` in person 3's page
+   **Expected:** Under person 3, loan list shows only the simple interest loans with amount remaining owed > $500.
+3. **Test case:** `filter abc`
+   **Expected:** Input is accepted, however loans are shown as if not filtered.
 
 ---
 
