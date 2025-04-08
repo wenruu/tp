@@ -1,7 +1,7 @@
 {
   "baseUrl": "",
   "titlePrefix": "Sharkives",
-  "titleSuffix": "AddressBook Level-3",
+  "titleSuffix": "v1.6",
   "faviconPath": "images/sharkivesLogo.png",
   "style": {
     "codeTheme": "light"
