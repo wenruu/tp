@@ -157,7 +157,6 @@ public class LoanList {
         if (loanListStr == null || loanListStr.equals(EMPTY_STRING) || loanListStr.trim().isEmpty()) {
             return loanList;
         }
-
         String[] loans = loanListStr.split(",");
         for (String loanStr : loans) {
             try {
