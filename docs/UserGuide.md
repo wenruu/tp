@@ -392,7 +392,7 @@ Exits the program.
 💡 Tips:
 
 - **exit** command is case sensitive
-  > Example: `"exit"` is **not** equal to `"exit"`
+  > Example: `"exit"` is **not** equal to `"Exit"`
 
 </div>
 
@@ -433,7 +433,8 @@ _Details coming soon ..._
 3. **Compound interest loan amount** can behave strangely when using a flexible payment schedule (i.e. payments made anytime instead of monthly)<br>
   a. As our algorithm assumes that the loanee will pay monthly for easier calculations, paying off-schedule can cause discrepancies in the remaining amount owed due to the way compound interest is calculated.<br>
   b. An update to this will be coming in future, where we will introduce a more sophisticated algorithm capable of calculating compound interest on a flexible repayment basis.
-4. **When using sort**, currently there exsists no unsort feature. However, it is 1 of the future features we plan to implement.
+4. **When using sort**, currently there is no unsort feature. However, it is one of the future features we plan to implement.
+5. The UI which displays monetary values may not always have accurate decimal placings, this is simply due rounding due to us forcing the display to be in 2dp.
 --------------------------------------------------------------------------------------------------------------------
 
 <div style="page-break-after: always;"></div>
@@ -443,9 +444,9 @@ _Details coming soon ..._
 | Action     | Format, Examples                                                                                                                                                                                           |
 |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Add**    | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​` <br> e.g., `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague`                                      |
-| **Loan**   | `loan INDEX TYPE(s/c) AMOUNT INTEREST_RATE DUE_DATE​` <br> e.g.,`loan 1 s 100.00 5 2030-12-31`||
+| **Loan**   | `loan INDEX TYPE(s/c) AMOUNT INTEREST_RATE DUE_DATE​` <br> e.g.,`loan 1 s 100.00 5 2030-12-31`|
 | **Clear**  | `clear`                                                                                                                                                                                                    |
-| **Delete** | `delete PERSON_INDEX`<br> e.g., `delete 3`<br> <br>`delete loan PERSON_INDEX LOAN_INDEX` <br> e.g., `delete loan 3 1`                                                                                      ||
+| **Delete** | `delete PERSON_INDEX`<br> e.g., `delete 3`<br> <br>`delete loan PERSON_INDEX LOAN_INDEX` <br> e.g., `delete loan 3 1`                                                                                      |
 | **Sort**   | `sort [s/PARAMETER] [o/ORDER]`<br> e.g., `sort s/AMOUNT o/ASC`                                                                                                                                             |
 | **Pay**    | `pay PERSON_INDEX LOAN_INDEX AMOUNT`<br> e.g., `pay 1 1 1000`<br> <br> `pay PERSON_INDEX LOAN_INDEX MONTHS'M'`<br> e.g., `pay 1 1 5M` <br> <br> `pay PERSON_INDEX LOAN_INDEX all` <br> e.g., `pay 1 1 all` |
 | **Filter** | `filter [INDEX] [pred/PREDICATE] ...`<br> e.g., `filter 3 pred/ amount > 500 pred/ loanType c`                                                                                                     |
@@ -469,7 +470,7 @@ _Details coming soon ..._
  
 #### Compound Interest Loans
 ![equation](https://github.com/user-attachments/assets/70d57e96-a2f1-42c2-93c4-e886e7d017a0)
-- Calculated using the formula show above, where:
+- Calculated using the formula shown above, where:
   - `A` is the periodic payment amount
   - `P` is the principal amount
   - `i` is the periodic interest rate

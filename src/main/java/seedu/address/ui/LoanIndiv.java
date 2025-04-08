@@ -94,9 +94,9 @@ public class LoanIndiv extends UiPart<VBox> {
 
             float paymentDifference = loan.getPaymentDifference();
             monthsOverdue.setText("Past instalments: "
-                    + (paymentDifference > 0 ? "Missed $" + paymentDifference
+                    + (paymentDifference > 0 ? "Missed $" + String.format("%.2f", paymentDifference)
                     : paymentDifference == 0 ? "All paid"
-                    : "Overpaid $" + -paymentDifference));
+                    : "Overpaid $" + String.format("%.2f", -paymentDifference)));
 
             int monthsUntilDueDate = loan.getMonthsUntilDueDate();
             monthsUntilDue.setText(monthsUntilDueDate >= 0
