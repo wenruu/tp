@@ -145,7 +145,8 @@ public abstract class Loan {
             this.dateLastPaid = null;
         } else {
             this.dateLastPaid = Loan.toValidLocalDate(strDateLastPaid);
-            checkArgument(this.dateLastPaid != null && dateLastPaid.isAfter(dateCreated));
+            checkArgument(this.dateLastPaid != null
+                && (dateLastPaid.isAfter(dateCreated) || this.dateCreated.isEqual(currentDate)));
         }
 
         // check strIsPaid
@@ -390,7 +391,6 @@ public abstract class Loan {
         if (fields.length != NUMBER_OF_FIELDS) {
             return null;
         }
-
         String strAmount = fields[0];
         String strAmtPaid = fields[1];
         String strInterest = fields[2];
